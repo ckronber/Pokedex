@@ -51,7 +51,7 @@ position:relative;
     margin-top: 3rem;
     width:20rem;
     border:solid black .1rem;
-    /*display:inline-flex;*/
+    display:inline-flex;
 }
 
 #card1{
