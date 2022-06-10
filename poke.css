@@ -49,6 +49,7 @@ position:relative;
 
 #botRow{
     margin-top: 3rem;
+    margin-left:1rem;
     width:20rem;
     display:inline-flex;
     background-color: #FFDE00;

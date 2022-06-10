@@ -13,20 +13,20 @@ function defaultPokeinfo(){
 function selectAttribute(attribute){
   document.getElementById("pokeAbilities").innerHTML = "";
   if (attribute == 1){
-    document.getElementById("dropdownMenuButton1").innerHTML = "Abilities";
+    document.getElementById("dropdownMenuButton1").innerHTML = "Abilities - " + abilities.length;
   
     for(ab of abilities){
       document.getElementById("pokeAbilities").innerHTML += "<li>"+ab+"</li>";
     }
   }
   else if(attribute == 2){
-    document.getElementById("dropdownMenuButton1").innerHTML = "Moves";
+    document.getElementById("dropdownMenuButton1").innerHTML = "Moves - " + moves.length;
     for(mv of moves){
       document.getElementById("pokeAbilities").innerHTML += "<li>"+mv+"</li>";
     }
   }
   else{
-    document.getElementById("dropdownMenuButton1").innerHTML = "Games";
+    document.getElementById("dropdownMenuButton1").innerHTML = "Games - " + games.length;
     for(gm of games){
       document.getElementById("pokeAbilities").innerHTML += "<li>"+gm+"</li>";
     }
@@ -132,5 +132,21 @@ function searchPokedexInfo(info){
     };
     
   xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon-species/"+info);
+  xhttp.send();
+}
+
+
+function searchFruit(fruit){
+  var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var pokeData1 = JSON.parse(this.response);
+     
+      document.getElementById("pokeName").innerHTML = pokeData1.name.replace(pokeData1.name[0],pokeData1.name[0].toUpperCase());
+      document.getElementById("pokeDescription").innerHTML = pokeData1.flavor_text_entries[1].flavor_text.replace("\f"," ");
+    }
+    };
+    
+  xhttp.open("GET", "https://pokeapi.co/api/v2/fruit/"+fruit);
   xhttp.send();
 }
