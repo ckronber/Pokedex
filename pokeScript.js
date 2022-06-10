@@ -49,6 +49,7 @@ function searchPokedexSprites(info){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("cancer").innerHTML ="";
       var pokeData1 = JSON.parse(this.response);
       console.log(pokeData1.sprites.front_default);
       document.getElementById("pokeImage").innerHTML = "<img src=\""+pokeData1.sprites.other.dream_world.front_default+"\">";
@@ -56,19 +57,22 @@ function searchPokedexSprites(info){
       getID(pokemonID);
 
     
-      console.log(pokeData1.abilities[0].ability.name);
       document.getElementById("pokeAbilities").innerHTML = "";
-      var aList = [];
-
       for(var i=0;i<pokeData1.abilities.length;i++){
-        document.getElementById("pokeAbilities").innerHTML += "<li>"+pokeData1.abilities[i].ability.name+"</>";
-
+        document.getElementById("pokeAbilities").innerHTML += "<li>"+pokeData1.abilities[i].ability.name+"</li>";
       }
 
-      document.getElementById("cancer").innerHTML ="";
+      document.getElementById("pExp").innerHTML = pokeData1.base_experience;
+      document.getElementById("pHeight").innerHTML = pokeData1.height;
+      document.getElementById("pWeight").innerHTML = pokeData1.weight;
+      document.getElementById("pOrder").innerHTML = pokeData1.order;
+      document.getElementById("pDef").innerHTML = pokeData1.is_default;
+      
     }
     else{
+      if(this.status == 404){
       document.getElementById("cancer").innerHTML =  "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">"+info+" does not exist as a Pokemon<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>";
+      }
     }
     };
   xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/"+info);

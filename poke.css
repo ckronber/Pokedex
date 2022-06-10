@@ -67,3 +67,8 @@ position:relative;
     font-weight: bolder;
     text-shadow: 10rem;
 }
+
+
+#mainAtt{
+    display: inline flex;
+}

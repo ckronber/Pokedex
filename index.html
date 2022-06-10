@@ -31,7 +31,8 @@
                   Dropdown
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Pokadex</a></li>
+                  <li><a class="dropdown-item" href="#abilities">Pokemon Attributes</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -49,7 +50,7 @@
     <!-- This is the error message area where javascript puts the message here -->
     <div id = "cancer"></div>
 
-    <div class="container" align="center">
+    <div class="container" align="center" id="pmonCard">
         <div class="row">
           <div class="col" align="center">
             <!-- Card for pokemon searched for -->
@@ -73,11 +74,36 @@
 
         <div class="row" id = "infoRow">
           <div class="col botRow1" id = "botRow">
-            <h2 align="center">Abilities</h2>
-            <br>
             <div id= "abilities">
-              <ul id="pokeAbilities">
-              </ul>
+
+              <div><h2>Pokemon Attributes</h2></div>
+              <br>
+
+              <div id = "mainAtt">
+                Base Experience: <div id="pExp"></div>
+                Height: <div id = "pHeight"></div>
+                Weight: <div id = "pWeight"></div>
+                Order: <div id = "pOrder"></div>
+                Is Default: <div id = "pDef"></div>
+              </div>
+
+              <br>
+              
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Abilities</a></li>
+                  <li><a class="dropdown-item" href="#">Moves</a></li>
+                  <li><a class="dropdown-item" href="#">Game Indices</a></li>
+                  <li><a class="dropdown-item" href="#">Other Stuff</a></li>
+                </ul>
+              </div>
+              <br>
+              <br>
+
+              <ul id="pokeAbilities"></ul>
             </div>
           </div>
           <div class="col botRow2" id = "botRow">
