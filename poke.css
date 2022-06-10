@@ -1,0 +1,69 @@
+#pokeImage img{
+    width:10rem;
+    height:10rem;
+    position:relative;
+    margin-top: 2.5rem;
+    border-radius:3rem;
+    box-shadow: .1rem .1rem .2rem green;
+}
+
+#mainLogo{
+    width:5rem;
+    height: auto;
+}
+
+#btnLeft{
+display:inline-block;
+width:3rem;
+font-weight:bolder;
+position:relative;
+margin-left: 1rem;
+}
+
+#btnRight{
+display:inline-block;
+width:3rem;
+margin-left: 7rem;
+font-weight:bolder;
+position:relative;
+}
+
+#pokeName{
+    text-shadow: 1px 1px 3px lightblue;
+}
+
+#pokeDescription{
+    background-color:rgba(128, 128, 128, 0.205);
+    border-radius: 1rem;
+    padding-left: .5rem;
+    box-shadow: .1rem .1rem .2rem green;
+    padding:.5rem;
+}
+
+
+/*Bottom Row*/
+
+#infoRow{
+    display:inline-block;
+}
+
+#botRow{
+    margin-top: 3rem;
+    width:20rem;
+    border:solid black .1rem;
+    /*display:inline-flex;*/
+}
+
+#card1{
+    margin-top: 4rem;
+    background-image: url(https://wallpaperaccess.com/full/3952024.png);
+}
+
+#dexNum{
+    position:absolute;
+    color: saddlebrown;
+    margin-left:1rem;
+    margin-top: 1rem;
+    font-weight: bolder;
+    text-shadow: 10rem;
+}
