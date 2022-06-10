@@ -50,13 +50,16 @@ position:relative;
 #botRow{
     margin-top: 3rem;
     width:20rem;
-    border:solid black .1rem;
     display:inline-flex;
+    background-color: #f9e45b;
+    border-radius: .5rem;
+    box-shadow: .1rem .1rem .2rem green;
 }
 
 #card1{
     margin-top: 4rem;
     background-image: url(https://wallpaperaccess.com/full/3952024.png);
+    box-shadow: .1rem .1rem .2rem green;
 }
 
 #dexNum{
@@ -71,4 +74,13 @@ position:relative;
 
 #mainAtt{
     display: inline flex;
+}
+
+#title1{
+    padding-top: 1rem;
+    margin-left: 1rem;
+}
+
+#abilities{
+    margin-left:1rem;
 }

@@ -1,4 +1,7 @@
 let pokemonID;
+let moves = [];
+let abilities = [];
+let games = [];
 
 function defaultPokeinfo(){
     var pokeInput = "charizard";
@@ -62,11 +65,11 @@ function searchPokedexSprites(info){
         document.getElementById("pokeAbilities").innerHTML += "<li>"+pokeData1.abilities[i].ability.name+"</li>";
       }
 
-      document.getElementById("pExp").innerHTML = pokeData1.base_experience;
-      document.getElementById("pHeight").innerHTML = pokeData1.height;
-      document.getElementById("pWeight").innerHTML = pokeData1.weight;
-      document.getElementById("pOrder").innerHTML = pokeData1.order;
-      document.getElementById("pDef").innerHTML = pokeData1.is_default;
+      document.getElementById("pExp").innerHTML = "Base Experience: " +pokeData1.base_experience;
+      document.getElementById("pHeight").innerHTML = "Height: " + pokeData1.height;
+      document.getElementById("pWeight").innerHTML = "Weight: " + pokeData1.weight;
+      document.getElementById("pOrder").innerHTML =  "Order: " + pokeData1.order;
+      document.getElementById("pDef").innerHTML =    "Is Default: " + pokeData1.is_default;
       
     }
     else{
