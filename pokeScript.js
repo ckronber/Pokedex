@@ -10,6 +10,29 @@ function defaultPokeinfo(){
     searchPokedexSprites(pokeInput);
 }
 
+function selectAttribute(attribute){
+  document.getElementById("pokeAbilities").innerHTML = "";
+  if (attribute == 1){
+    document.getElementById("dropdownMenuButton1").innerHTML = "Abilities";
+  
+    for(ab of abilities){
+      document.getElementById("pokeAbilities").innerHTML += "<li>"+ab+"</li>";
+    }
+  }
+  else if(attribute == 2){
+    document.getElementById("dropdownMenuButton1").innerHTML = "Moves";
+    for(mv of moves){
+      document.getElementById("pokeAbilities").innerHTML += "<li>"+mv+"</li>";
+    }
+  }
+  else{
+    document.getElementById("dropdownMenuButton1").innerHTML = "Games";
+    for(gm of games){
+      document.getElementById("pokeAbilities").innerHTML += "<li>"+gm+"</li>";
+    }
+  }
+}
+
 function getAllPokeinfo(pokemonHere){
     let pokeInput = document.getElementById("pokeEntry").value.toLowerCase();
     console.log(pokeInput);
@@ -59,10 +82,25 @@ function searchPokedexSprites(info){
       pokemonID = pokeData1.id;
       getID(pokemonID);
 
-    
+      moves = [];
+      abilities = [];
+      games = [];
+      
+      document.getElementById("dropdownMenuButton1").innerHTML = "Abilities";
+
       document.getElementById("pokeAbilities").innerHTML = "";
       for(var i=0;i<pokeData1.abilities.length;i++){
+        abilities.push(pokeData1.abilities[i].ability.name) 
         document.getElementById("pokeAbilities").innerHTML += "<li>"+pokeData1.abilities[i].ability.name+"</li>";
+      }
+
+      for(var i=0;i<pokeData1.moves.length;i++){
+        console.log(pokeData1.moves[i].move.name);
+        moves.push(pokeData1.moves[i].move.name);
+      }
+      
+      for(var i=0;i<pokeData1.game_indices.length;i++){
+        games.push(pokeData1.game_indices[i].version.name);
       }
 
       document.getElementById("pExp").innerHTML = "Base Experience: " +pokeData1.base_experience;
