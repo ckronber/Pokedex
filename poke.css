@@ -29,7 +29,7 @@ position:relative;
 }
 
 #pokeName{
-    text-shadow: 1px 1px 3px lightblue;
+    text-shadow: 1px 1px 3px #5DB9FF;
 }
 
 #pokeDescription{
@@ -55,11 +55,12 @@ position:relative;
     background-color: #FFDE00;
     border-radius: .5rem;
     box-shadow: .1rem .1rem .2rem green;
+    justify-content:center;
 }
 
 #card1{
     margin-top: 4rem;
-    background-image: url(https://wallpaperaccess.com/full/3952024.png);
+    background-color: #5DB9FF;
     box-shadow: .1rem .1rem .2rem green;
 }
 
@@ -72,16 +73,21 @@ position:relative;
     text-shadow: 10rem;
 }
 
-
 #mainAtt{
     display: inline flex;
 }
 
 #title1{
     padding-top: 1rem;
-    margin-left: 1rem;
 }
 
-#abilities{
-    margin-left:1rem;
+#title2{
+    padding-top: 1rem;
+}
+
+
+/*Second Column of the bottom part*/
+#accordionFlushExample{
+    width:19rem;
+    background-color: transparent;
 }
